@@ -40,7 +40,7 @@ void main () {
     vec3 worldSpacePosition = vec3(u_inverseViewMatrix * vec4(viewSpacePosition, 1.0));
 
     float speed = data.b;
-    vec3 color = hsvToRGB(vec3(max(0.6 - speed * 0.0025, 0.52), 0.75, 1.0));
+    vec3 color = hsvToRGB(vec3(max(0.6 - speed * 0.003, 0.42), 1, 1.0));
 
 
     vec4 lightSpacePosition = u_lightProjectionViewMatrix * vec4(worldSpacePosition, 1.0);
@@ -62,7 +62,7 @@ void main () {
 
 
     float ambient = 1.0 - occlusion * 0.7;
-    float direct = 1.0 - (1.0 - shadow) * 0.8;
+    float direct = 1.0 - (1.0 - shadow) * 0.1;
 
     color *= ambient * direct;
 

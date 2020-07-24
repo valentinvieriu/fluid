@@ -82,6 +82,8 @@ body {
 
     top: 30px;
     left: 30px;
+
+    display: none!important;
 }
 
 #particle-count {
@@ -131,8 +133,8 @@ body {
 .instructions {
     position: absolute;
 
-    bottom: 30px;
-    left: 30px;
+    bottom: 250px;
+    right: 30px;
 
     font-size: 12px;
     line-height: 16px;
@@ -158,9 +160,10 @@ body {
     color: #555555;
 }
 
-#footer a {
-    text-decoration: underline;
-    color: #555555;
+#footer svg {
+    fill: #fff;
+    height: 80px;
+    margin-top: 70px;
 }
 
 #container {
@@ -187,3 +190,95 @@ body {
 #linkback a {
     color: #333333;
 }
+.editing-ui {
+    display: none;
+}
+
+.simulating-ui {
+    display: none;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#footer {
+    opacity: 0.9;
+    min-height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iLTYwIiB5MT0iLTMiIHgyPSIxOTAiIHkyPSIxNjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzRkMTBlMSIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iLjE5MSIgc3RvcC1jb2xvcj0iIzRiMTNlMSIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iLjMzMiIgc3RvcC1jb2xvcj0iIzQ1MWNlMSIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iLjQ1NyIgc3RvcC1jb2xvcj0iIzNhMmNlMCIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iLjU3MiIgc3RvcC1jb2xvcj0iIzJiNDNkZiIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iLjY4IiBzdG9wLWNvbG9yPSIjMTg2MGRlIiBzdG9wLW9wYWNpdHk9Ii41Ii8+PHN0b3Agb2Zmc2V0PSIuNzE1IiBzdG9wLWNvbG9yPSIjMTE2YmRlIiBzdG9wLW9wYWNpdHk9Ii41Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGI3NGRlIiBzdG9wLW9wYWNpdHk9Ii41Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMTI4IDEyOC4wNDVWMjguODk3Qzk2LjMgNy45OTIgNTYuOTc5LTMuMTQyIDIxLjM3NC43NzcgMTMuMzk0IDEuNjU2IDYuMjcgMy42ODgtLjAxNSA2LjY4NHYxMjEuMzYxSDEyOHoiLz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMzAyIiB5MT0iOTkiIHgyPSItNTMiIHkyPSItMTAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTgzMyIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iLjIxIiBzdG9wLWNvbG9yPSIjMDBlMzNhIiBzdG9wLW9wYWNpdHk9Ii41MTkiLz48c3RvcCBvZmZzZXQ9Ii4yNzEiIHN0b3AtY29sb3I9IiMwMWRkNDIiIHN0b3Atb3BhY2l0eT0iLjU3NiIvPjxzdG9wIG9mZnNldD0iLjM2NiIgc3RvcC1jb2xvcj0iIzAyY2U1OSIgc3RvcC1vcGFjaXR5PSIuNjY0Ii8+PHN0b3Agb2Zmc2V0PSIuNDg1IiBzdG9wLWNvbG9yPSIjMDViNjdlIiBzdG9wLW9wYWNpdHk9Ii43NzQiLz48c3RvcCBvZmZzZXQ9Ii42MiIgc3RvcC1jb2xvcj0iIzA4OTRiMCIgc3RvcC1vcGFjaXR5PSIuODk5Ii8+PHN0b3Agb2Zmc2V0PSIuNzI0IiBzdG9wLWNvbG9yPSIjMGI3NmRjIiBzdG9wLW9wYWNpdHk9Ii45OTYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwYjc0ZGUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0xMjggMTI4LjA0NVY3LjcwNEM5OS45MTggMy43NTEgNjMuNjU2IDUuMzg3IDIzLjk0MiAxMy41NDljLTguNCAxLjY0OC0xNi4zOTUgMy40NTYtMjMuOTU3IDUuNDA5djEwOS4wODZIMTI4di4wMDF6Ii8+PC9zdmc+) 0% 0% / 100% 100% no-repeat;
+}
+.message {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    right: 15%;
+    background-color: rgba(255,255,255,0.7);
+    padding: 35px;
+    border-radius: 10px;
+}                
+h1 {
+    font-family: "Poppins Bold", sans-serif;
+    color: #0077e1;
+    margin-top: 0;
+}
+.logo > svg {
+    fill: #0b74de;
+    width: 150px;
+    fill: #0b74de;
+    transform: translateY(14px);
+}
+h2 {
+    font-family: "Poppins Semibold", sans-serif;
+    color:#444
+}
+p {
+    font-family: "Poppins Medium", sans-serif;
+} 
+.highlight, a {
+    color: #0077e1;
+    text-decoration: none;
+}                               
+@font-face {
+font-family: Poppins;
+src: url(https://kyma-project.io/font/poppins-v5-latin-500.eot);
+src: local('Poppins Medium'), local('Poppins-Medium'),
+    url(https://kyma-project.io/font/poppins-v5-latin-500.eot?#iefix) format('embedded-opentype'),
+    url(https://kyma-project.io/font/poppins-v5-latin-500.woff2) format('woff2'),
+    url(https://kyma-project.io/font/poppins-v5-latin-500.woff) format('woff'),
+    url(https://kyma-project.io/font/poppins-v5-latin-500.ttf) format('truetype'),
+    url(https://kyma-project.io/font/poppins-v5-latin-500.svg#Poppins) format('svg');
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+}
+@font-face {
+font-family: Poppins;
+src: url(https://kyma-project.io/font/poppins-v5-latin-600.eot);
+src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+    url(https://kyma-project.io/font/poppins-v5-latin-600.eot?#iefix) format('embedded-opentype'),
+    url(https://kyma-project.io/font/poppins-v5-latin-600.woff2) format('woff2'),
+    url(https://kyma-project.io/font/poppins-v5-latin-600.woff) format('woff'),
+    url(https://kyma-project.io/font/poppins-v5-latin-600.ttf) format('truetype'),
+    url(https://kyma-project.io/font/poppins-v5-latin-600.svg#Poppins) format('svg');
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+}
+@font-face {
+font-family: Poppins;
+src: url(https://kyma-project.io/font/poppins-v5-latin-700.eot);
+src: local('Poppins Bold'), local('Poppins-Bold'),
+    url(https://kyma-project.io/font/poppins-v5-latin-700.eot?#iefix) format('embedded-opentype'),
+    url(https://kyma-project.io/font/poppins-v5-latin-700.woff2) format('woff2'),
+    url(https://kyma-project.io/font/poppins-v5-latin-700.woff) format('woff'),
+    url(https://kyma-project.io/font/poppins-v5-latin-700.ttf) format('truetype'),
+    url(https://kyma-project.io/font/poppins-v5-latin-700.svg#Poppins) format('svg');
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+}    

@@ -12,7 +12,7 @@ var FluidParticles = (function () {
         GRID_HEIGHT = 20,
         GRID_DEPTH = 20;
 
-    var PARTICLES_PER_CELL = 10;
+    var PARTICLES_PER_CELL = 10; 
 
     function FluidParticles () {
 
@@ -61,7 +61,7 @@ var FluidParticles = (function () {
                 }
             }).bind(this));
 
-            this.currentPresetIndex = 0;
+            this.currentPresetIndex = 1;
             this.editedSinceLastPreset = false; //whether the user has edited the last set preset
             var PRESETS = [
                 //dam break
@@ -106,13 +106,12 @@ var FluidParticles = (function () {
             // parameters/sliders
 
             //using gridCellDensity ensures a linear relationship to particle count
-            this.gridCellDensity = 0.5; //simulation grid cell density per world space unit volume
+            this.gridCellDensity = 0.22; //we need around 18538 items simulation grid cell density per world space unit volume
 
             this.timeStep = 1.0 / 60.0;
 
             this.densitySlider = new Slider(document.getElementById('density-slider'), this.gridCellDensity, 0.2, 3.0, (function (value) {
                 this.gridCellDensity = value; 
-
                 this.redrawUI();
             }).bind(this));
 
@@ -158,7 +157,7 @@ var FluidParticles = (function () {
             }).bind(this);
             update();
 
-
+            document.dispatchEvent(new Event('fluidStarted'));
         }
     }
 
@@ -295,9 +294,9 @@ var FluidParticles = (function () {
         }
 
         var fractionFilled = totalVolume / (GRID_WIDTH * GRID_HEIGHT * GRID_DEPTH);
-
+        
         var desiredParticleCount = fractionFilled * totalGridCells * PARTICLES_PER_CELL; //theoretical number of particles
-
+        console.log(desiredParticleCount)
         return desiredParticleCount;
     }
 
